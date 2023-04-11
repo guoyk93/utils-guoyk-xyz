@@ -9,7 +9,7 @@ const router = createRouter({
             name: 'home',
             component: ViewHome,
             meta: {
-                title: 'Y.K.\'s Utilities'
+                title: 'y.k.\'s utilities'
             }
         },
         {
@@ -17,8 +17,8 @@ const router = createRouter({
             name: 'kubernetes_dockerconfig',
             component: () => import('@/views/ViewK8sDockerconfig.vue'),
             meta: {
-                title: 'Kubernetes/Dockerconfig',
-                group: 'Kubernetes',
+                title: 'kubernetes/dockerconfig',
+                group: 'kubernetes',
                 utils: true
             },
         },
@@ -27,8 +27,8 @@ const router = createRouter({
             name: 'kubernetes_files_to_config',
             component: () => import('@/views/ViewK8sFilesToConfig.vue'),
             meta: {
-                title: 'Kubernetes/FilesToConfig',
-                group: 'Kubernetes',
+                title: 'kubernetes/filesToConfig',
+                group: 'kubernetes',
                 utils: true,
             },
         },
