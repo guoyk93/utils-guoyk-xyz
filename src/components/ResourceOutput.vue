@@ -40,14 +40,17 @@ export default {
     },
     methods: {
         doCopy() {
-            copy(this.resourceString, {
+            const success = copy(this.resourceString, {
+                debug: true,
                 message: 'Press #{key} to copy',
+                type: 'text',
                 onCopy: () => {
                     this.$toast.success('Copied to clipboard', {
                         position: 'bottom'
                     })
                 }
             });
+            console.log("Success: " + success)
         }
     },
     computed: {
