@@ -1,6 +1,6 @@
 <template>
     <select id="main-select" class="form-select" v-model="selected">
-        <option value="_none">Choose Utility</option>
+        <option value="_none">Choose an Utility</option>
         <template v-for="item in items" v-bind:key="item.name">
             <option v-if="item.isGroup" disabled>{{ item.name }}</option>
             <option v-else :value="item.routeName">{{ item.title }}</option>
