@@ -1,5 +1,5 @@
 <script setup>
-import {Codemirror} from "vue-codemirror";
+import ResourceOutput from "@/components/ResourceOutput.vue";
 </script>
 
 <template>
@@ -34,28 +34,19 @@ import {Codemirror} from "vue-codemirror";
         </div>
 
         <div class="col-12 col-md-8 mt-3 mt-md-0">
-            <div class="card">
-                <div class="card-body">
-                    <codemirror
-                            :disabled="true"
-                            :indent-with-tab="true"
-                            :tab-size="2"
-                            :model-value="output"
-                    ></codemirror>
-                </div>
-            </div>
+            <ResourceOutput :resource="resource"/>
         </div>
+
     </div>
 </template>
 
 <script>
-import YAML from "yaml";
 import {Base64} from "js-base64";
 
 export default {
     name: "ViewK8sDockerconfig",
     computed: {
-        output() {
+        resource() {
             const auths = {};
             auths[this.item.registry] = {
                 "auth": Base64.encode(this.item.username + ":" + this.item.password)
@@ -75,12 +66,11 @@ export default {
             if (this.item.namespace) {
                 res.metadata.namespace = this.item.namespace;
             }
-            return YAML.stringify(res);
+            return res
         }
     },
     data() {
         return {
-            useStringData: false,
             item: {
                 name: "secret-name",
                 namespace: "",
