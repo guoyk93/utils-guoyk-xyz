@@ -7,7 +7,10 @@ const router = createRouter({
         {
             path: '/',
             name: 'home',
-            component: ViewHome
+            component: ViewHome,
+            meta: {
+                title: 'Y.K.\'s Utilities'
+            }
         },
         {
             path: '/kubernetes/dockerconfig',
