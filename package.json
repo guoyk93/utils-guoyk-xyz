@@ -8,8 +8,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codemirror/lang-json": "^6.0.1",
+    "@codemirror/theme-one-dark": "^6.1.1",
+    "@dvuckovic/vue3-bootstrap-icons": "^1.0.6",
+    "@popperjs/core": "^2.11.7",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.4",
+    "bootswatch": "^5.2.3",
+    "code-mirror": "^4.0.1",
+    "codemirror": "^6.0.1",
+    "js-base64": "^3.7.5",
     "vue": "^3.2.47",
-    "vue-router": "^4.1.6"
+    "vue-codemirror": "^6.1.1",
+    "vue-page-title": "^2.2.0",
+    "vue-router": "^4.1.6",
+    "yaml": "^2.2.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
