@@ -13,7 +13,11 @@
             </div>
         </div>
 
-        <div id="main-content" class="col-12 col-md-8 mt-3 mt-md-0" v-html="contentHTML"></div>
+        <div id="main-content" class="col-12 col-md-8 mt-3 mt-md-0">
+            <div class="card">
+                <div class="card-body" v-html="contentHTML"></div>
+            </div>
+        </div>
 
     </div>
 </template>
