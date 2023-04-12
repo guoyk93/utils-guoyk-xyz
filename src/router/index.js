@@ -32,6 +32,16 @@ const router = createRouter({
                 utils: true,
             },
         },
+        {
+            path: '/markdown/render',
+            name: 'markdown_render',
+            component: () => import('@/views/ViewMarkdownRender.vue'),
+            meta: {
+                title: 'markdown/render',
+                group: 'markdown',
+                utils: true,
+            },
+        },
     ]
 })
 
