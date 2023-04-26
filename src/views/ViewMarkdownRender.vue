@@ -54,31 +54,32 @@ div#main-content blockquote {
 }
 
 div#main-content h1 {
-    text-align: center;
-    font-size: 2.0rem;
+    border-left: 4px gray solid;
+    padding-left: 0.8rem;
+    font-size: 1.8rem;
     margin-top: 1.4rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.8rem;
 }
 
 div#main-content h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
 }
 
 div#main-content h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 div#main-content h4 {
+    font-size: 1.2rem;
     margin-top: 0.8rem;
-    font-size: 1.4rem;
 }
 
 div#main-content h5 {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
 }
 
 div#main-content img {
