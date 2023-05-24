@@ -2,38 +2,29 @@
     <div class="card">
         <div class="card-body">
             <div class="d-flex justify-content-between">
-                <button @click="doCopy" class="btn btn-primary">
-                    <bootstrap-icon icon="clipboard" class="me-1"/>
-                    <span>Copy</span>
-                </button>
                 <select id="select-format" class="form-select" v-model="format">
                     <option value="yaml">YAML</option>
                     <option value="json">JSON</option>
                 </select>
+                <span></span>
             </div>
-            <hr/>
+            <hr />
             <div>
-                <codemirror
-                        ref="codemirror"
-                        :disabled="true"
-                        :indent-with-tab="true"
-                        :tab-size="2"
-                        :model-value="resourceString"
-                ></codemirror>
+                <codemirror ref="codemirror" :disabled="true" :indent-with-tab="true" :tab-size="2"
+                    :model-value="resourceString"></codemirror>
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
 import YAML from "yaml";
-import {Codemirror} from "vue-codemirror";
+import { Codemirror } from "vue-codemirror";
 import copy from "copy-to-clipboard";
 
 export default {
     name: "ResourceOutput",
-    components: {Codemirror},
+    components: { Codemirror },
     props: ['resource'],
     mounted() {
         this.format = localStorage.getItem('default-resource-format') || 'yaml'
@@ -79,5 +70,4 @@ export default {
 #select-format {
     width: 12rem;
 }
-
 </style>
