@@ -6,7 +6,8 @@
           <form>
             <div class="mb-3">
               <label for="input-url" class="form-label">URL</label>
-              <textarea class="form-control" id="input-url" v-model="item.url" rows="32"></textarea>
+              <textarea :placeholder="inputPlaceholder" class="form-control" id="input-url" v-model="input"
+                        rows="32"></textarea>
             </div>
           </form>
         </div>
@@ -27,7 +28,7 @@ export default {
   components: {ResourceOutput},
   computed: {
     resource() {
-      let input = this.item.url
+      let input = this.input
       if (!input) {
         return {}
       }
@@ -62,9 +63,8 @@ export default {
   },
   data() {
     return {
-      item: {
-        url: ''
-      },
+      inputPlaceholder: "ssr://YzNiMDMxYjliYTgzMGU1ZWQ5NmUyZjAzMzZkMjVlYzNhZjVmZTgzZjg3NjYxYjAwOTI3MDdjNjA1NjNjMmFiNQo=",
+      input: '',
     }
   }
 }
