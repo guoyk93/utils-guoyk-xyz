@@ -42,6 +42,16 @@ const router = createRouter({
                 utils: true,
             },
         },
+        {
+            path: '/shadow/decode-url',
+            name: 'shadow_decode_url',
+            component: () => import('@/views/ViewShadowDecodeUrl.vue'),
+            meta: {
+                title: 'shadow/decodeUrl',
+                group: 'shadow',
+                utils: true,
+            }
+        }
     ]
 })
 
