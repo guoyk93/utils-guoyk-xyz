@@ -43,6 +43,8 @@ export default {
         let res = {
           server: items[0],
           server_port: Number(items[1]),
+          local_address: '0.0.0.0',
+          local_port: 1080,
           protocol: items[2],
           method: items[3],
           obfs: items[4],
